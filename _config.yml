@@ -4,10 +4,10 @@
 # ---------------------------------------------------------------
 
 # Site
-title: 嘉树
+title: 萧国笔记
 subtitle:
-description:
-author: 嘉树
+description:你是我最好的作品
+author: 萧国
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 language: en
 date_format: '%Y-%m-%d'
@@ -233,7 +233,7 @@ social_icons:
 
 # Sidebar Avatar
 # in directory: /assets/images/avatar.gif
-#avatar:
+#avatar: 
 
 
 # Table Of Contents in the Sidebar
