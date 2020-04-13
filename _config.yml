@@ -4,12 +4,12 @@
 # ---------------------------------------------------------------
 
 # Site
-title: 萧国笔记
+title: 心猿意马
 subtitle:
-description:你是我最好的作品
+description: 你是我最好的作品
 author: 萧国
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
-language: en
+language: zh-Hans	
 date_format: '%Y-%m-%d'
 
 # URL
@@ -83,8 +83,7 @@ keywords: "Jekyll, NexT"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
-# Set rss to specific value if you have burned your feed already.
-rss:
+# Set rss to specific value if you have burned your feed already.rss:
 
 # Specify the date when the site was setup
 #since: 2015
@@ -118,12 +117,12 @@ index_with_subtitle: false
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  #categories: /categories/
-  #about: /about/
-  archives: /archives/
+  categories: /categories/
+  about: /about/
+  #archives: /archives/
   tags: /tags/
-  #sitemap: /sitemap.xml
-  #commonweal: /404.html
+  sitemap: /sitemap.xml
+  commonweal: /404.html
 
 
 # Enable/Disable menu icons.
@@ -233,7 +232,7 @@ social_icons:
 
 # Sidebar Avatar
 # in directory: /assets/images/avatar.gif
-#avatar: 
+avatar: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.namedq.com%2Fpic%2Flol%2F227092.html&psig=AOvVaw1wRkmv1pyA52rtG7Fn716r&ust=1586870973713000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPi2iJjB5egCFQAAAAAdAAAAABAD
 
 
 # Table Of Contents in the Sidebar
