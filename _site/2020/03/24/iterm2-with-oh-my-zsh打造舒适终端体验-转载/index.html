@@ -1,0 +1,1035 @@
+
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/assets/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/assets/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/assets/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="iTerm2,Oh my Zsh," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="NexT" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="iTerm2 + Oh My Zsh 打造舒适终端体验">
+<meta name="keywords" content="iTerm2, Oh my Zsh">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iTerm2 + Oh My Zsh 打造舒适终端体验">
+<meta property="og:url" content="http://localhost:4000/2020/03/24/iterm2-with-oh-my-zsh%E6%89%93%E9%80%A0%E8%88%92%E9%80%82%E7%BB%88%E7%AB%AF%E4%BD%93%E9%AA%8C-%E8%BD%AC%E8%BD%BD/">
+<meta property="og:site_name" content="NexT">
+<meta property="og:description" content="iTerm2 + Oh My Zsh 打造舒适终端体验">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/14.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/1.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/2.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/3.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/4.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/5.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/6.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/7.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/8.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/9.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/10.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/11.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/12.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/13.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/14.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/15.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/16.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iTerm2 + Oh My Zsh 打造舒适终端体验">
+<meta name="twitter:description" content="iTerm2 + Oh My Zsh 打造舒适终端体验">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/14.png">
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://localhost:4000/"/>
+
+
+
+
+
+  <title>iTerm2 + Oh My Zsh 打造舒适终端体验 | NexT</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">NexT</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+<div id="posts" class="posts-expand">
+  
+  
+
+  
+
+  
+  
+  
+
+  <article class="post post-type- " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://localhost:4000/2020/03/24/iterm2-with-oh-my-zsh%E6%89%93%E9%80%A0%E8%88%92%E9%80%82%E7%BB%88%E7%AB%AF%E4%BD%93%E9%AA%8C-%E8%BD%AC%E8%BD%BD/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="assets/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NexT">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+          
+          
+            iTerm2 + Oh My Zsh 打造舒适终端体验
+          
+        </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-24T00:00:00+08:00">
+                2020-03-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+            
+                <div class="post-description">
+                    
+                </div>
+            
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <h1 id="iterm2--oh-my-zsh-打造舒适终端体验">iTerm2 + Oh My Zsh 打造舒适终端体验</h1>
+
+<hr />
+<h3 id="写在前面">写在前面</h3>
+
+<p>最终效果图：</p>
+
+<p><img src="https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/14.png" alt="ImageInitIterm" /></p>
+
+<p>本文严重抄袭自：https://www.jianshu.com/p/7de00c73a2bb</p>
+
+<p>因排版和原文中的一些bug，参照搜索引擎和原文有了本篇文章。</p>
+
+<p>因为powerline以及homebrew均需要安装command line tool，网络条件优越的同学在执行本文下面内容之前，可以先安装XCode并打开运行一次（会初始化安装components），省去以后在iterm2中的等待时间。</p>
+
+<p>另外，git也是必要的，各位可以自行下载安装，除了网络没有任何坑：</p>
+
+<p>https://git-scm.com</p>
+
+<p>介于此，本文默认各位同学已经安装了git环境和xcode（command line tools），遇到提示找不到git命令或需要安装command line tool的地方，文中不再赘述了。</p>
+
+<h3 id="下载iterm2">下载iTerm2</h3>
+
+<p>可以直接去官网下载：https://www.iterm2.com/</p>
+
+<p>安装完成后，在/bin目录下会多出一个zsh的文件。</p>
+
+<p>Mac系统默认使用dash作为终端，可以使用命令修改默认使用zsh：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1</pre></td><td class="code"><pre class="highlight"><code>chsh <span class="nt">-s</span> /bin/zsh
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>如果想修改回默认dash，同样使用chsh命令即可：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1</pre></td><td class="code"><pre class="highlight"><code>chsh <span class="nt">-s</span> /bin/bash
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>OK，这就是iTerm2初始的样子，下面我们来美化它，让它变得更好用！</p>
+
+<p><img src="https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/1.png" alt="ImageInitIterm" /></p>
+
+<h3 id="安装oh-my-zsh">安装Oh my zsh</h3>
+
+<p>安装方法有两种，可以使用curl或wget，看自己环境或喜好：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2</pre></td><td class="code"><pre class="highlight"><code><span class="c"># curl 安装方式</span>
+sh <span class="nt">-c</span> <span class="s2">"</span><span class="k">$(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh<span class="k">)</span><span class="s2">"</span>
+</code></pre></td></tr></tbody></table></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2</pre></td><td class="code"><pre class="highlight"><code><span class="c"># wget 安装方式</span>
+sh <span class="nt">-c</span> <span class="s2">"</span><span class="k">$(</span>wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh <span class="nt">-O</span> -<span class="k">)</span><span class="s2">"</span>
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>安装命令和安装完成后的截图：</p>
+
+<p><img src="https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/2.png" alt="ImageInitIterm" /></p>
+
+<p>oh-my-zsh开源地址：https://github.com/robbyrussell/oh-my-zsh</p>
+
+<h3 id="安装powerline">安装PowerLine</h3>
+
+<p>Powerline是agnoster主题的依赖。具体可以在repo里查询到：
+https://github.com/agnoster/agnoster-zsh-theme</p>
+
+<p>powerline官网：http://powerline.readthedocs.io/en/latest/installation.html</p>
+
+<p>安装powerline的方式依然简单，也只需要一条命令：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1</pre></td><td class="code"><pre class="highlight"><code>pip install powerline-status <span class="nt">--user</span>
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>没有安装pip的同学可能会碰到zsh: command not found: pip。</p>
+
+<p><img src="https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/3.png" alt="ImageInitIterm" /></p>
+
+<p>使用命令安装pip即可：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1</pre></td><td class="code"><pre class="highlight"><code><span class="nb">sudo </span>easy_install pip
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>安装后再次执行安装powerline的命令即可。</p>
+
+<p><img src="https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/4.png" alt="ImageInitIterm" /></p>
+
+<h3 id="安装powerfonts">安装PowerFonts</h3>
+
+<p>安装字体库需要首先将项目git clone至本地，然后执行源码中的install.sh。</p>
+
+<p>在你习惯的位置新建一个文件夹，如：~/Desktop/OpenSource/</p>
+
+<p><img src="https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/5.png" alt="ImageInitIterm" /></p>
+
+<p>在此文件夹下执行git clone命令：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6</pre></td><td class="code"><pre class="highlight"><code><span class="c"># git clone</span>
+git clone https://github.com/powerline/fonts.git <span class="nt">--depth</span><span class="o">=</span>1
+<span class="c"># cd to folder</span>
+<span class="nb">cd </span>fonts
+<span class="c"># run install shell</span>
+./install.sh
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>执行结果如下：</p>
+
+<p><img src="https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/6.png" alt="ImageInitIterm" /></p>
+
+<p>安装好字体库之后，我们来设置iTerm2的字体，具体的操作是iTerm2 -&gt; Preferences -&gt; Profiles -&gt; Text，在Font区域选中Change Font，然后找到Meslo LG字体。有L、M、S可选，看个人喜好：</p>
+
+<p><img src="https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/7.png" alt="ImageInitIterm" /></p>
+
+<h3 id="安装配色方案">安装配色方案</h3>
+
+<p>配色方案在使用VIM或Colorful Log时会变得非常有用，同时界面也不会一片黑绿一样死板。</p>
+
+<p>同样使用git clone的方式下载源码进行安装：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4</pre></td><td class="code"><pre class="highlight"><code><span class="nb">cd</span> ~/Desktop/OpenSource
+git clone https://github.com/altercation/solarized
+<span class="nb">cd </span>solarized/iterm2-colors-solarized/
+open <span class="nb">.</span>
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>在打开的finder窗口中，双击Solarized Dark.itermcolors和Solarized Light.itermcolors即可安装明暗两种配色：</p>
+
+<p><img src="https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/8.png" alt="ImageInitIterm" /></p>
+
+<p>再次进入iTerm2 -&gt; Preferences -&gt; Profiles -&gt; Colors -&gt; Color Presets中根据个人喜好选择这两种配色中的一种即可：</p>
+
+<p><img src="https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/9.png" alt="ImageInitIterm" /></p>
+
+<h3 id="安装主题">安装主题</h3>
+
+<p>下载agnoster主题，执行脚本安装：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4</pre></td><td class="code"><pre class="highlight"><code><span class="nb">cd</span> ~/Desktop/OpenSource
+git clone https://github.com/fcamblor/oh-my-zsh-agnoster-fcamblor.git
+<span class="nb">cd </span>oh-my-zsh-agnoster-fcamblor/
+./install
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>执行上面的命令会将主题拷贝到oh my zsh的themes中：</p>
+
+<p><img src="https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/10.png" alt="ImageInitIterm" /></p>
+
+<p>拷贝完成后，执行命令打开zshrc配置文件，将ZSH_THEME后面的字段改为agnoster。</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1</pre></td><td class="code"><pre class="highlight"><code>vi ~/.zshrc
+</code></pre></td></tr></tbody></table></div></div>
+
+<p><img src="https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/11.png" alt="ImageInitIterm" /></p>
+
+<p>修改完成后按一下esc调出vi命令，输入:wq保存并退出vi模式。</p>
+
+<p>此时command+Q或source配置文件后，iTerm2变了模样：</p>
+
+<p><img src="https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/12.png" alt="ImageInitIterm" /></p>
+
+<h3 id="安装高亮插件">安装高亮插件</h3>
+
+<p>这是oh my zsh的一个插件，安装方式与theme大同小异：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3</pre></td><td class="code"><pre class="highlight"><code><span class="nb">cd</span> ~/.oh-my-zsh/custom/plugins/
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+vi ~/.zshrc
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>这时我们再次打开zshrc文件进行编辑。找到plugins，此时plugins中应该已经有了git，我们需要把高亮插件也加上：</p>
+
+<p><img src="https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/13.png" alt="ImageInitIterm" /></p>
+
+<p>请务必保证插件顺序，zsh-syntax-highlighting必须在最后一个。</p>
+
+<p>然后在文件的最后一行添加：source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh</p>
+
+<p>按一下esc调出vi命令，输入:wq保存并退出vi模式。</p>
+
+<p>执行命令使刚才的修改生效：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1</pre></td><td class="code"><pre class="highlight"><code><span class="nb">source</span> ~/.zshrc
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>至此大功告成，请看最终效果图：</p>
+
+<p><img src="https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/14.png" alt="ImageInitIterm" /></p>
+
+<p>背景图片取自微软Surface Studio的4K壁纸(将近12MB大小)，非常漂亮，需要的可以自取：</p>
+
+<p>https://pan.baidu.com/s/1LKd4ghGyyNI6UwHhOHvfaA
+提取码: snrd</p>
+
+<p>更换背景图片方式：iTerm2 -&gt; Preferences -&gt; Profiles -&gt; Window -&gt; BackGround Image勾选图片即可。</p>
+
+<h4 id="可选择命令补全">可选择、命令补全</h4>
+
+<p>跟代码高亮的安装方式一样，这也是一个zsh的插件，叫做zsh-autosuggestion，用于命令建议和补全。</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3</pre></td><td class="code"><pre class="highlight"><code><span class="nb">cd</span> ~/.oh-my-zsh/custom/plugins/
+git clone https://github.com/zsh-users/zsh-autosuggestions
+vi ~/.zshrc
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>找到plugins，加上这个插件即可：</p>
+
+<p><img src="https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/15.png" alt="ImageInitIterm" /></p>
+
+<p>插件效果：</p>
+
+<p><img src="https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/16.png" alt="ImageInitIterm" /></p>
+
+<p>有同学说补全命令的字体不太清晰，与背景颜色太过相近，其实可以自己调整一下字体颜色。</p>
+
+<p>Preferences -&gt; Profiles -&gt; Colors 中有Foreground是标准字体颜色，ANSI Colors中Bright的第一个是补全的字体颜色。</p>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            
+            <a href="/tag/#/iTerm2" rel="tag"># iTerm2</a>
+          
+            
+            <a href="/tag/#/Oh%20my%20Zsh" rel="tag"># Oh my Zsh</a>
+          
+        </div>
+      
+
+      
+      
+      
+      
+      
+
+      
+      
+        <div class="post-nav" id="post-nav-id">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/03/24/jekyll%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95%E5%8D%9A%E5%AE%A2%E9%A1%B5%E9%9D%A2/" rel="next" title="jekyll debug">
+                <i class="fa fa-chevron-left"></i> jekyll debug
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/03/23/%E4%BB%8E%E9%9B%B6%E5%87%BA%E5%8F%91/" rel="prev" title="Hello 2020">
+                Hello 2020 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+      
+
+      
+    </footer>
+  </article>
+
+  <div class="post-spread">
+    
+  </div>
+</div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        
+        
+        
+
+
+
+
+
+
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/assets/images/avatar.gif"
+               alt="John Doe" />
+          <p class="site-author-name" itemprop="name">John Doe</p>
+           
+              <p class="site-description motion-element" itemprop="description">Elegant theme for Jekyll.</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/">
+                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+        
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+            
+              <div class="post-toc-content">
+    <ol class=nav>
+      <li class="nav-item nav-level-1"> <a class="nav-link" href="#iterm2--oh-my-zsh-打造舒适终端体验"> <span class="nav-number">1</span> <span class="nav-text">iTerm2 + Oh My Zsh 打造舒适终端体验</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-3"> <a class="nav-link" href="#写在前面"> <span class="nav-number">1.1</span> <span class="nav-text">写在前面</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#下载iterm2"> <span class="nav-number">1.2</span> <span class="nav-text">下载iTerm2</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#安装oh-my-zsh"> <span class="nav-number">1.3</span> <span class="nav-text">安装Oh my zsh</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#安装powerline"> <span class="nav-number">1.4</span> <span class="nav-text">安装PowerLine</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#安装powerfonts"> <span class="nav-number">1.5</span> <span class="nav-text">安装PowerFonts</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#安装配色方案"> <span class="nav-number">1.6</span> <span class="nav-text">安装配色方案</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#安装主题"> <span class="nav-number">1.7</span> <span class="nav-text">安装主题</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#安装高亮插件"> <span class="nav-number">1.8</span> <span class="nav-text">安装高亮插件</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-4"> <a class="nav-link" href="#可选择命令补全"> <span class="nav-number">1.8.1</span> <span class="nav-text">可选择、命令补全</span> </a> </li> </ol> </li> </ol> </li>
+    </ol>
+  </div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://jekyllrb.com">Jekyll</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/simpleyyt/jekyll-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/assets/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/assets/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/assets/js/src/post-details.js?v=5.1.1"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+    
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
+
