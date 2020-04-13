@@ -86,7 +86,7 @@ keywords: "Jekyll, NexT"
 # Set rss to specific value if you have burned your feed already.rss:
 
 # Specify the date when the site was setup
-#since: 2015
+since: 2019
 
 # icon between year and author @Footer
 authoricon: heart
@@ -118,11 +118,11 @@ index_with_subtitle: false
 menu:
   home: /
   categories: /categories/
-  about: /about/
-  #archives: /archives/
+  archives: /archives/
   tags: /tags/
-  sitemap: /sitemap.xml
-  commonweal: /404.html
+  about: /about/
+  #sitemap: /sitemap.xml
+  #commonweal: /404.html
 
 
 # Enable/Disable menu icons.
@@ -139,8 +139,8 @@ menu_icons:
   schedule: calendar
   tags: tags
   archives: archive
-  sitemap: sitemap
-  commonweal: heartbeat
+  #sitemap: sitemap
+  #commonweal: heartbeat
 
 
 
@@ -232,8 +232,7 @@ social_icons:
 
 # Sidebar Avatar
 # in directory: /assets/images/avatar.gif
-avatar: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.namedq.com%2Fpic%2Flol%2F227092.html&psig=AOvVaw1wRkmv1pyA52rtG7Fn716r&ust=1586870973713000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPi2iJjB5egCFQAAAAAdAAAAABAD
-
+# avatar:
 
 # Table Of Contents in the Sidebar
 toc:
