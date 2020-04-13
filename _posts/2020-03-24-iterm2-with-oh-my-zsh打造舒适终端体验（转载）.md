@@ -1,10 +1,8 @@
 ---
 layout:     post
 title:      iTerm2 + Oh My Zsh 打造舒适终端体验 
-subtitle:    "\"iTerm2 + Oh My Zsh 打造舒适终端体验\""
+subtitle:    "\"iTerm2 + Oh My Zsh \""
 date:       2020-03-24
-author:     YL
-header-img: img/post-bg-2015.jpg
 catalog: true
 tags:
     - iTerm2
@@ -13,7 +11,7 @@ tags:
 
 # iTerm2 + Oh My Zsh 打造舒适终端体验
 
----
+
 ### 写在前面
 
 最终效果图：
