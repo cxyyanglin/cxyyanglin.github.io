@@ -1,90 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-16T00:03:24+08:00</updated><id>http://localhost:4000/atom.xml</id><title type="html">意马心猿</title><subtitle>你是我最好的作品</subtitle><author><name>萧国</name></author><entry><title type="html">Mac 快速调出终端</title><link href="http://localhost:4000/2020/04/13/Mac%E5%BF%AB%E9%80%9F%E8%B0%83%E5%87%BA%E7%BB%88%E7%AB%AF/" rel="alternate" type="text/html" title="Mac 快速调出终端" /><published>2020-04-13T00:00:00+08:00</published><updated>2020-04-13T00:00:00+08:00</updated><id>http://localhost:4000/2020/04/13/Mac%E5%BF%AB%E9%80%9F%E8%B0%83%E5%87%BA%E7%BB%88%E7%AB%AF</id><content type="html" xml:base="http://localhost:4000/2020/04/13/Mac%E5%BF%AB%E9%80%9F%E8%B0%83%E5%87%BA%E7%BB%88%E7%AB%AF/">&lt;blockquote&gt;
-  &lt;p&gt;在Mac下快速调出终端的方法是：为终端添加一个快捷键打开方式&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;为终端添加一个快捷键打开方式&quot;&gt;为终端添加一个快捷键打开方式&lt;/h2&gt;
-
-&lt;p&gt;打开Mac下自带的软件 &lt;strong&gt;Automator&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://ww2.sinaimg.cn/large/006tKfTcgy1fckb184f74j319v0q01kx.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;新建文稿&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://ww1.sinaimg.cn/large/006tKfTcgy1fckb6zzo28j30mo0fvgn7.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;创建一个服务&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://ww1.sinaimg.cn/large/006tKfTcgy1fckb93qmy5j30g00fh0vq.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://ww2.sinaimg.cn/large/006tKfTcgy1fckbfe8o0zj30t10lb0wv.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://ww1.sinaimg.cn/large/006tKfTcgy1fckbff4e7pj30t10lbwis.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;修改框内的脚本&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;on run {input, parameters}
-	tell application &quot;Terminal&quot;
-		reopen
-		activate
-	end tell
-end run
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;运行：&lt;code class=&quot;highlighter-rouge&quot;&gt;command + R&lt;/code&gt;，如果没有问题，则会打开终端&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://ww2.sinaimg.cn/large/006tKfTcgy1fckaqdd2m1j30t10lb42a.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://ww3.sinaimg.cn/large/006tKfTcgy1fckaq4nn9hj30iy0daaan.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;保存：&lt;code class=&quot;highlighter-rouge&quot;&gt;Command + S&lt;/code&gt;，将其命名为&lt;code class=&quot;highlighter-rouge&quot;&gt;打开终端&lt;/code&gt;或你想要的名字&lt;/p&gt;
-
-&lt;p&gt;设置快捷键&lt;/p&gt;
-
-&lt;p&gt;在 &lt;strong&gt;系统偏好设置&lt;/strong&gt; -&amp;gt; &lt;strong&gt;键盘设置&lt;/strong&gt; -&amp;gt; &lt;strong&gt;快捷键&lt;/strong&gt; -&amp;gt; &lt;strong&gt;服务&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;选择我们创建好的 ‘&lt;strong&gt;打开终端&lt;/strong&gt;‘，设置你想要的快捷键，比我我设置了&lt;code class=&quot;highlighter-rouge&quot;&gt;⌘+空格&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://ww4.sinaimg.cn/large/006tKfTcgy1fckbvaixhnj30kw0ihq67.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;到此，设置完成。&lt;/p&gt;
-
-&lt;p&gt;聪明的你也许会发现，这个技巧能为所有的程序设置快捷启动。&lt;/p&gt;
-
-&lt;p&gt;将脚本中的 &lt;code class=&quot;highlighter-rouge&quot;&gt;Terminal&lt;/code&gt; 替换成 其他程序就可以&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;on run {input, parameters}
-    tell application &quot;Terminal&quot;
-        reopen
-        activate
-    end tell
-end run
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;黑技能&quot;&gt;黑技能&lt;/h2&gt;
-
-&lt;p&gt;既然学了 &lt;code class=&quot;highlighter-rouge&quot;&gt;Automator&lt;/code&gt; ，那就在附上一个黑技能吧。为你的代码排序。在 &lt;strong&gt;Xcode8&lt;/strong&gt;以前，有个插件能为代码快速排序，不过时过境迁~ 对于没用的插件而且又有患有强迫症的的小伙伴，只能手动排序了（😂）.&lt;/p&gt;
-
-&lt;p&gt;首先还是创建一个服务&lt;/p&gt;
-
-&lt;p&gt;创建一个&lt;code class=&quot;highlighter-rouge&quot;&gt;Shell&lt;/code&gt;脚本，&lt;/p&gt;
-
-&lt;p&gt;勾选:&lt;code class=&quot;highlighter-rouge&quot;&gt;用输出内容替换所选文本&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;输入：&lt;code class=&quot;highlighter-rouge&quot;&gt;sort|uniq&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;保存： 存为&lt;code class=&quot;highlighter-rouge&quot;&gt;Sort &amp;amp; Uniq&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://ww4.sinaimg.cn/large/006tKfTcgy1fckd40rgwmj30rt0ildiy.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;选中你的代代码&lt;/strong&gt; -&amp;gt; &lt;strong&gt;鼠标右键&lt;/strong&gt; -&amp;gt; &lt;strong&gt;Servies&lt;/strong&gt; -&amp;gt; &lt;strong&gt;Sort&amp;amp;Uniq&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://ww2.sinaimg.cn/large/006tKfTcgy1fckd6tx1dzj30h90b7mzm.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;排序后的代码：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://ww3.sinaimg.cn/large/006tKfTcgy1fckd6lak55j309j05y3yo.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>BY</name></author><category term="Mac" /><category term="效率" /><category term="开发技巧" /><summary type="html">在Mac下快速调出终端的方法是：为终端添加一个快捷键打开方式</summary></entry><entry><title type="html">iTerm2 + Oh My Zsh 打造舒适终端体验</title><link href="http://localhost:4000/2020/03/24/iterm2-with-oh-my-zsh%E6%89%93%E9%80%A0%E8%88%92%E9%80%82%E7%BB%88%E7%AB%AF%E4%BD%93%E9%AA%8C-%E8%BD%AC%E8%BD%BD/" rel="alternate" type="text/html" title="iTerm2 + Oh My Zsh 打造舒适终端体验" /><published>2020-03-24T00:00:00+08:00</published><updated>2020-03-24T00:00:00+08:00</updated><id>http://localhost:4000/2020/03/24/iterm2-with-oh-my-zsh%E6%89%93%E9%80%A0%E8%88%92%E9%80%82%E7%BB%88%E7%AB%AF%E4%BD%93%E9%AA%8C(%E8%BD%AC%E8%BD%BD)</id><content type="html" xml:base="http://localhost:4000/2020/03/24/iterm2-with-oh-my-zsh%E6%89%93%E9%80%A0%E8%88%92%E9%80%82%E7%BB%88%E7%AB%AF%E4%BD%93%E9%AA%8C-%E8%BD%AC%E8%BD%BD/">&lt;h1 id=&quot;iterm2--oh-my-zsh-打造舒适终端体验&quot;&gt;iTerm2 + Oh My Zsh 打造舒适终端体验&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-16T00:12:31+08:00</updated><id>http://localhost:4000/atom.xml</id><title type="html">意马心猿</title><subtitle>你是我最好的作品</subtitle><author><name>萧国</name></author><entry><title type="html">iTerm2 + Oh My Zsh 打造舒适终端体验</title><link href="http://localhost:4000/2020/03/24/iterm2-with-oh-my-zsh%E6%89%93%E9%80%A0%E8%88%92%E9%80%82%E7%BB%88%E7%AB%AF%E4%BD%93%E9%AA%8C-%E8%BD%AC%E8%BD%BD/" rel="alternate" type="text/html" title="iTerm2 + Oh My Zsh 打造舒适终端体验" /><published>2020-03-24T00:00:00+08:00</published><updated>2020-03-24T00:00:00+08:00</updated><id>http://localhost:4000/2020/03/24/iterm2-with-oh-my-zsh%E6%89%93%E9%80%A0%E8%88%92%E9%80%82%E7%BB%88%E7%AB%AF%E4%BD%93%E9%AA%8C(%E8%BD%AC%E8%BD%BD)</id><content type="html" xml:base="http://localhost:4000/2020/03/24/iterm2-with-oh-my-zsh%E6%89%93%E9%80%A0%E8%88%92%E9%80%82%E7%BB%88%E7%AB%AF%E4%BD%93%E9%AA%8C-%E8%BD%AC%E8%BD%BD/">&lt;h1 id=&quot;iterm2--oh-my-zsh-打造舒适终端体验&quot;&gt;iTerm2 + Oh My Zsh 打造舒适终端体验&lt;/h1&gt;
 
 &lt;h3 id=&quot;写在前面&quot;&gt;写在前面&lt;/h3&gt;
 
@@ -294,7 +208,15 @@ vi ~/.zshrc
 
 &lt;p&gt;有同学说补全命令的字体不太清晰，与背景颜色太过相近，其实可以自己调整一下字体颜色。&lt;/p&gt;
 
-&lt;p&gt;Preferences -&amp;gt; Profiles -&amp;gt; Colors 中有Foreground是标准字体颜色，ANSI Colors中Bright的第一个是补全的字体颜色。&lt;/p&gt;</content><author><name>萧国</name></author><category term="iTerm2" /><category term="Oh my Zsh" /><summary type="html">iTerm2 + Oh My Zsh 打造舒适终端体验</summary></entry><entry><title type="html">jekyll debug</title><link href="http://localhost:4000/2020/03/24/jekyll%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95%E5%8D%9A%E5%AE%A2%E9%A1%B5%E9%9D%A2/" rel="alternate" type="text/html" title="jekyll debug" /><published>2020-03-24T00:00:00+08:00</published><updated>2020-03-24T00:00:00+08:00</updated><id>http://localhost:4000/2020/03/24/jekyll%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95%E5%8D%9A%E5%AE%A2%E9%A1%B5%E9%9D%A2</id><content type="html" xml:base="http://localhost:4000/2020/03/24/jekyll%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95%E5%8D%9A%E5%AE%A2%E9%A1%B5%E9%9D%A2/">&lt;h2 id=&quot;jekll-本地调试博客页面&quot;&gt;jekll 本地调试博客页面&lt;/h2&gt;
+&lt;p&gt;Preferences -&amp;gt; Profiles -&amp;gt; Colors 中有Foreground是标准字体颜色，ANSI Colors中Bright的第一个是补全的字体颜色。&lt;/p&gt;</content><author><name>萧国</name></author><category term="iTerm2" /><category term="Oh my Zsh" /><summary type="html">iTerm2 + Oh My Zsh 打造舒适终端体验</summary></entry><entry><title type="html">jekyll 教程</title><link href="http://localhost:4000/%E6%B5%8B%E8%AF%95%E5%88%86%E7%B1%BB/2020/03/24/jekyl-tools/" rel="alternate" type="text/html" title="jekyll 教程" /><published>2020-03-24T00:00:00+08:00</published><updated>2020-03-24T00:00:00+08:00</updated><id>http://localhost:4000/%E6%B5%8B%E8%AF%95%E5%88%86%E7%B1%BB/2020/03/24/jekyl-tools</id><content type="html" xml:base="http://localhost:4000/%E6%B5%8B%E8%AF%95%E5%88%86%E7%B1%BB/2020/03/24/jekyl-tools/">&lt;p&gt;我是前言部分1
+我是前言部分2&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;我是前言部分3
+我是前言部分4&lt;/p&gt;
+
+&lt;h2 id=&quot;jekll-本地调试博客页面&quot;&gt;jekll 本地调试博客页面&lt;/h2&gt;
 &lt;blockquote&gt;
   &lt;p&gt;解决每一篇博客都要同步到github上，然后才可以渲染查看页面的不便，需要在本地更新完博客之后，就可以预览和调试&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -330,7 +252,7 @@ vi ~/.zshrc
 &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll s&lt;/code&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;关闭链接&quot;&gt;关闭链接&lt;/h3&gt;
-&lt;p&gt;ctrl-c 即可&lt;/p&gt;</content><author><name>YL</name></author><category term="jekyll" /><summary type="html">jekll 本地调试博客页面 解决每一篇博客都要同步到github上，然后才可以渲染查看页面的不便，需要在本地更新完博客之后，就可以预览和调试</summary></entry><entry><title type="html">Hello 2020</title><link href="http://localhost:4000/2020/03/23/%E4%BB%8E%E9%9B%B6%E5%87%BA%E5%8F%91/" rel="alternate" type="text/html" title="Hello 2020" /><published>2020-03-23T00:00:00+08:00</published><updated>2020-03-23T00:00:00+08:00</updated><id>http://localhost:4000/2020/03/23/%E4%BB%8E%E9%9B%B6%E5%87%BA%E5%8F%91</id><content type="html" xml:base="http://localhost:4000/2020/03/23/%E4%BB%8E%E9%9B%B6%E5%87%BA%E5%8F%91/">&lt;h2 id=&quot;从新开始&quot;&gt;从新开始&lt;/h2&gt;
+&lt;p&gt;ctrl-c 即可&lt;/p&gt;</content><author><name>萧国</name></author><category term="jekyll" /><summary type="html">我是前言部分1 我是前言部分2</summary></entry><entry><title type="html">Hello 2020</title><link href="http://localhost:4000/2020/03/23/%E4%BB%8E%E9%9B%B6%E5%87%BA%E5%8F%91/" rel="alternate" type="text/html" title="Hello 2020" /><published>2020-03-23T00:00:00+08:00</published><updated>2020-03-23T00:00:00+08:00</updated><id>http://localhost:4000/2020/03/23/%E4%BB%8E%E9%9B%B6%E5%87%BA%E5%8F%91</id><content type="html" xml:base="http://localhost:4000/2020/03/23/%E4%BB%8E%E9%9B%B6%E5%87%BA%E5%8F%91/">&lt;h2 id=&quot;从新开始&quot;&gt;从新开始&lt;/h2&gt;
 &lt;p&gt;生活忽然很浮躁，很多事情没有来的及去做，或者来的及沉淀，时间就一点一点过去了。
 总是要认真面对生活的，要不然每天活在惶恐和不安里，让我觉得生活了无生机，没有什么意思，也不能更好的感受和体验生活。对自己和自己所关心的人来说，没有比这更差的状态了。&lt;/p&gt;
 
@@ -351,11 +273,7 @@ vi ~/.zshrc
 &lt;p&gt;Changelog：&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;2020-03-23 初稿&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>YL</name></author><category term="生活" /><summary type="html">从新开始 生活忽然很浮躁，很多事情没有来的及去做，或者来的及沉淀，时间就一点一点过去了。 总是要认真面对生活的，要不然每天活在惶恐和不安里，让我觉得生活了无生机，没有什么意思，也不能更好的感受和体验生活。对自己和自己所关心的人来说，没有比这更差的状态了。</summary></entry><entry><title type="html">2020使用jekyll</title><link href="http://localhost:4000/2020/03/23/%E4%BD%BF%E7%94%A8jekyll/" rel="alternate" type="text/html" title="2020使用jekyll" /><published>2020-03-23T00:00:00+08:00</published><updated>2020-03-23T00:00:00+08:00</updated><id>http://localhost:4000/2020/03/23/%E4%BD%BF%E7%94%A8jekyll</id><content type="html" xml:base="http://localhost:4000/2020/03/23/%E4%BD%BF%E7%94%A8jekyll/">&lt;h2 id=&quot;数据测试&quot;&gt;数据测试&lt;/h2&gt;
-
-&lt;h3 id=&quot;这样是否可以快速展现&quot;&gt;这样是否可以快速展现&lt;/h3&gt;
-
-&lt;p&gt;我想知道数据可以怎么被发出来，并且可以被魔战站&lt;/p&gt;</content><author><name>萧国</name></author><category term="Mac" /><category term="效率" /><category term="开发技巧" /><summary type="html">数据测试</summary></entry><entry><title type="html">中文測試</title><link href="http://localhost:4000/test/test/2013/12/25/%E4%B8%AD%E6%96%87%E6%B5%8B%E8%AF%95/" rel="alternate" type="text/html" title="中文測試" /><published>2013-12-25T07:31:30+08:00</published><updated>2013-12-25T07:31:30+08:00</updated><id>http://localhost:4000/test/test/2013/12/25/%E4%B8%AD%E6%96%87%E6%B5%8B%E8%AF%95</id><content type="html" xml:base="http://localhost:4000/test/test/2013/12/25/%E4%B8%AD%E6%96%87%E6%B5%8B%E8%AF%95/">&lt;p&gt;This is a Chinese test post.&lt;/p&gt;
+&lt;/ol&gt;</content><author><name>YL</name></author><category term="生活" /><summary type="html">从新开始 生活忽然很浮躁，很多事情没有来的及去做，或者来的及沉淀，时间就一点一点过去了。 总是要认真面对生活的，要不然每天活在惶恐和不安里，让我觉得生活了无生机，没有什么意思，也不能更好的感受和体验生活。对自己和自己所关心的人来说，没有比这更差的状态了。</summary></entry><entry><title type="html">中文測試</title><link href="http://localhost:4000/test/test/2013/12/25/%E4%B8%AD%E6%96%87%E6%B5%8B%E8%AF%95/" rel="alternate" type="text/html" title="中文測試" /><published>2013-12-25T07:31:30+08:00</published><updated>2013-12-25T07:31:30+08:00</updated><id>http://localhost:4000/test/test/2013/12/25/%E4%B8%AD%E6%96%87%E6%B5%8B%E8%AF%95</id><content type="html" xml:base="http://localhost:4000/test/test/2013/12/25/%E4%B8%AD%E6%96%87%E6%B5%8B%E8%AF%95/">&lt;p&gt;This is a Chinese test post.&lt;/p&gt;
 
 &lt;p&gt;善我王上魚、產生資西員合兒臉趣論。畫衣生這著爸毛親可時，安程幾？合學作。觀經而作建。都非子作這！法如言子你關！手師也。&lt;/p&gt;
 

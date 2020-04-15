@@ -1,14 +1,23 @@
 ---
 layout:     post
-title:      jekyll debug
+title:      jekyll 教程
 subtitle:    "\"Hello World, Hello Blog\""
 date:       2020-03-24
-author:     YL
-header-img: img/post-bg-2015.jpg
+author:     萧国
 catalog: true
+categories: 测试分类
 tags:
     - jekyll
 ---
+我是前言部分1
+我是前言部分2
+
+<!-- more -->
+
+我是前言部分3
+我是前言部分4
+
+
 ## jekll 本地调试博客页面
 > 解决每一篇博客都要同步到github上，然后才可以渲染查看页面的不便，需要在本地更新完博客之后，就可以预览和调试
 
@@ -16,6 +25,7 @@ tags:
 * Ruby 2.4.0 或更高版本，包含所有用于开发的头文件（可通过* 执行 ruby -v 指令检查 ruby 版本）
 * RubyGems （可通过执行 gem -v 指令检查版本）
 * GCC and Make （以防你的系统中没有安装这些工具，请通过执行 gcc -v,g++ -v 和 make -v 指令进行检查，gcc 需要安装command line，如果电脑上已经安装完xcode，一般情况下命令行工具和gcc、make都会安装完成）
+
 
 如果上述工具没有安装完成，请参考以下两个链接：
 * [Jekyll 先决条件](https://www.jekyll.com.cn/docs/installation/#requirements)
