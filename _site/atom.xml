@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-16T00:12:31+08:00</updated><id>http://localhost:4000/atom.xml</id><title type="html">意马心猿</title><subtitle>你是我最好的作品</subtitle><author><name>萧国</name></author><entry><title type="html">iTerm2 + Oh My Zsh 打造舒适终端体验</title><link href="http://localhost:4000/2020/03/24/iterm2-with-oh-my-zsh%E6%89%93%E9%80%A0%E8%88%92%E9%80%82%E7%BB%88%E7%AB%AF%E4%BD%93%E9%AA%8C-%E8%BD%AC%E8%BD%BD/" rel="alternate" type="text/html" title="iTerm2 + Oh My Zsh 打造舒适终端体验" /><published>2020-03-24T00:00:00+08:00</published><updated>2020-03-24T00:00:00+08:00</updated><id>http://localhost:4000/2020/03/24/iterm2-with-oh-my-zsh%E6%89%93%E9%80%A0%E8%88%92%E9%80%82%E7%BB%88%E7%AB%AF%E4%BD%93%E9%AA%8C(%E8%BD%AC%E8%BD%BD)</id><content type="html" xml:base="http://localhost:4000/2020/03/24/iterm2-with-oh-my-zsh%E6%89%93%E9%80%A0%E8%88%92%E9%80%82%E7%BB%88%E7%AB%AF%E4%BD%93%E9%AA%8C-%E8%BD%AC%E8%BD%BD/">&lt;h1 id=&quot;iterm2--oh-my-zsh-打造舒适终端体验&quot;&gt;iTerm2 + Oh My Zsh 打造舒适终端体验&lt;/h1&gt;
-
-&lt;h3 id=&quot;写在前面&quot;&gt;写在前面&lt;/h3&gt;
-
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-16T09:36:12+08:00</updated><id>http://localhost:4000/atom.xml</id><title type="html">意马心猿</title><subtitle>你是我最好的作品</subtitle><author><name>萧国</name></author><entry><title type="html">iTerm2 + Oh My Zsh 打造舒适终端体验（转载）</title><link href="http://localhost:4000/2020/03/24/iterm2-with-oh-my-zsh/" rel="alternate" type="text/html" title="iTerm2 + Oh My Zsh 打造舒适终端体验（转载）" /><published>2020-03-24T00:00:00+08:00</published><updated>2020-03-24T00:00:00+08:00</updated><id>http://localhost:4000/2020/03/24/iterm2-with-oh-my-zsh</id><content type="html" xml:base="http://localhost:4000/2020/03/24/iterm2-with-oh-my-zsh/">&lt;h3 id=&quot;写在前面&quot;&gt;写在前面&lt;/h3&gt;
 &lt;p&gt;最终效果图：&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/14.png&quot; alt=&quot;ImageInitIterm&quot; /&gt;&lt;/p&gt;
@@ -9,6 +6,8 @@
 &lt;p&gt;本文严重抄袭自：https://www.jianshu.com/p/7de00c73a2bb&lt;/p&gt;
 
 &lt;p&gt;因排版和原文中的一些bug，参照搜索引擎和原文有了本篇文章。&lt;/p&gt;
+
+&lt;!-- more --&gt;
 
 &lt;p&gt;因为powerline以及homebrew均需要安装command line tool，网络条件优越的同学在执行本文下面内容之前，可以先安装XCode并打开运行一次（会初始化安装components），省去以后在iterm2中的等待时间。&lt;/p&gt;
 
@@ -208,13 +207,9 @@ vi ~/.zshrc
 
 &lt;p&gt;有同学说补全命令的字体不太清晰，与背景颜色太过相近，其实可以自己调整一下字体颜色。&lt;/p&gt;
 
-&lt;p&gt;Preferences -&amp;gt; Profiles -&amp;gt; Colors 中有Foreground是标准字体颜色，ANSI Colors中Bright的第一个是补全的字体颜色。&lt;/p&gt;</content><author><name>萧国</name></author><category term="iTerm2" /><category term="Oh my Zsh" /><summary type="html">iTerm2 + Oh My Zsh 打造舒适终端体验</summary></entry><entry><title type="html">jekyll 教程</title><link href="http://localhost:4000/%E6%B5%8B%E8%AF%95%E5%88%86%E7%B1%BB/2020/03/24/jekyl-tools/" rel="alternate" type="text/html" title="jekyll 教程" /><published>2020-03-24T00:00:00+08:00</published><updated>2020-03-24T00:00:00+08:00</updated><id>http://localhost:4000/%E6%B5%8B%E8%AF%95%E5%88%86%E7%B1%BB/2020/03/24/jekyl-tools</id><content type="html" xml:base="http://localhost:4000/%E6%B5%8B%E8%AF%95%E5%88%86%E7%B1%BB/2020/03/24/jekyl-tools/">&lt;p&gt;我是前言部分1
-我是前言部分2&lt;/p&gt;
+&lt;p&gt;Preferences -&amp;gt; Profiles -&amp;gt; Colors 中有Foreground是标准字体颜色，ANSI Colors中Bright的第一个是补全的字体颜色。&lt;/p&gt;</content><author><name>萧国</name></author><category term="iTerm2" /><category term="Oh my Zsh" /><summary type="html">写在前面 最终效果图： 本文严重抄袭自：https://www.jianshu.com/p/7de00c73a2bb 因排版和原文中的一些bug，参照搜索引擎和原文有了本篇文章。</summary></entry><entry><title type="html">jekyll 从零到一</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF/2020/03/24/jekyl-tools/" rel="alternate" type="text/html" title="jekyll 从零到一" /><published>2020-03-24T00:00:00+08:00</published><updated>2020-03-24T00:00:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF/2020/03/24/jekyl-tools</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF/2020/03/24/jekyl-tools/">&lt;p&gt;记录从零到一开始研究使用jekll + github 生成个人博客的点点滴滴。&lt;/p&gt;
 
 &lt;!-- more --&gt;
-
-&lt;p&gt;我是前言部分3
-我是前言部分4&lt;/p&gt;
 
 &lt;h2 id=&quot;jekll-本地调试博客页面&quot;&gt;jekll 本地调试博客页面&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -252,10 +247,11 @@ vi ~/.zshrc
 &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll s&lt;/code&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;关闭链接&quot;&gt;关闭链接&lt;/h3&gt;
-&lt;p&gt;ctrl-c 即可&lt;/p&gt;</content><author><name>萧国</name></author><category term="jekyll" /><summary type="html">我是前言部分1 我是前言部分2</summary></entry><entry><title type="html">Hello 2020</title><link href="http://localhost:4000/2020/03/23/%E4%BB%8E%E9%9B%B6%E5%87%BA%E5%8F%91/" rel="alternate" type="text/html" title="Hello 2020" /><published>2020-03-23T00:00:00+08:00</published><updated>2020-03-23T00:00:00+08:00</updated><id>http://localhost:4000/2020/03/23/%E4%BB%8E%E9%9B%B6%E5%87%BA%E5%8F%91</id><content type="html" xml:base="http://localhost:4000/2020/03/23/%E4%BB%8E%E9%9B%B6%E5%87%BA%E5%8F%91/">&lt;h2 id=&quot;从新开始&quot;&gt;从新开始&lt;/h2&gt;
+&lt;p&gt;ctrl-c 即可&lt;/p&gt;</content><author><name>萧国</name></author><category term="jekyll" /><summary type="html">记录从零到一开始研究使用jekll + github 生成个人博客的点点滴滴。</summary></entry><entry><title type="html">Hello 2020</title><link href="http://localhost:4000/%E7%94%9F%E6%B4%BB/2020/03/23/hello-2020/" rel="alternate" type="text/html" title="Hello 2020" /><published>2020-03-23T00:00:00+08:00</published><updated>2020-03-23T00:00:00+08:00</updated><id>http://localhost:4000/%E7%94%9F%E6%B4%BB/2020/03/23/hello-2020</id><content type="html" xml:base="http://localhost:4000/%E7%94%9F%E6%B4%BB/2020/03/23/hello-2020/">&lt;h2 id=&quot;从新开始&quot;&gt;从新开始&lt;/h2&gt;
 &lt;p&gt;生活忽然很浮躁，很多事情没有来的及去做，或者来的及沉淀，时间就一点一点过去了。
 总是要认真面对生活的，要不然每天活在惶恐和不安里，让我觉得生活了无生机，没有什么意思，也不能更好的感受和体验生活。对自己和自己所关心的人来说，没有比这更差的状态了。&lt;/p&gt;
 
+&lt;!-- more --&gt;
 &lt;h2 id=&quot;有所放弃&quot;&gt;有所放弃&lt;/h2&gt;
 &lt;p&gt;需求太多就会导致欲望太多，自己不能达成欲望时，痛苦便随之而来，越发恐怖，愈发痛苦，生活也随之乏味。
 我们要学会的是，学会控制我们自己的欲望，在一个比较简单的逻辑里，或者自己认定的逻辑里，不断去打磨逻辑，打磨兴趣，打磨生活，打磨自己。
@@ -273,7 +269,8 @@ vi ~/.zshrc
 &lt;p&gt;Changelog：&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;2020-03-23 初稿&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>YL</name></author><category term="生活" /><summary type="html">从新开始 生活忽然很浮躁，很多事情没有来的及去做，或者来的及沉淀，时间就一点一点过去了。 总是要认真面对生活的，要不然每天活在惶恐和不安里，让我觉得生活了无生机，没有什么意思，也不能更好的感受和体验生活。对自己和自己所关心的人来说，没有比这更差的状态了。</summary></entry><entry><title type="html">中文測試</title><link href="http://localhost:4000/test/test/2013/12/25/%E4%B8%AD%E6%96%87%E6%B5%8B%E8%AF%95/" rel="alternate" type="text/html" title="中文測試" /><published>2013-12-25T07:31:30+08:00</published><updated>2013-12-25T07:31:30+08:00</updated><id>http://localhost:4000/test/test/2013/12/25/%E4%B8%AD%E6%96%87%E6%B5%8B%E8%AF%95</id><content type="html" xml:base="http://localhost:4000/test/test/2013/12/25/%E4%B8%AD%E6%96%87%E6%B5%8B%E8%AF%95/">&lt;p&gt;This is a Chinese test post.&lt;/p&gt;
+&lt;/ol&gt;</content><author><name>萧国</name></author><category term="感悟" /><summary type="html">从新开始 生活忽然很浮躁，很多事情没有来的及去做，或者来的及沉淀，时间就一点一点过去了。 总是要认真面对生活的，要不然每天活在惶恐和不安里，让我觉得生活了无生机，没有什么意思，也不能更好的感受和体验生活。对自己和自己所关心的人来说，没有比这更差的状态了。</summary></entry><entry><title type="html">中文測試</title><link href="http://localhost:4000/test/2013/12/25/%E4%B8%AD%E6%96%87%E6%B5%8B%E8%AF%95/" rel="alternate" type="text/html" title="中文測試" /><published>2013-12-25T07:31:30+08:00</published><updated>2013-12-25T07:31:30+08:00</updated><id>http://localhost:4000/test/2013/12/25/%E4%B8%AD%E6%96%87%E6%B5%8B%E8%AF%95</id><content type="html" xml:base="http://localhost:4000/test/2013/12/25/%E4%B8%AD%E6%96%87%E6%B5%8B%E8%AF%95/">&lt;p&gt;This is a Chinese test post.
+&lt;!-- more --&gt;&lt;/p&gt;
 
 &lt;p&gt;善我王上魚、產生資西員合兒臉趣論。畫衣生這著爸毛親可時，安程幾？合學作。觀經而作建。都非子作這！法如言子你關！手師也。&lt;/p&gt;
 
@@ -281,4 +278,4 @@ vi ~/.zshrc
 
 &lt;p&gt;就竟在，是我童示讓利分和異種百路關母信過明驗有個歷洋中前合著區亮風值新底車有正結，進快保的行戰從：弟除文辦條國備當來際年每小腳識世可的的外的廣下歌洲保輪市果底天影；全氣具些回童但倒影發狀在示，數上學大法很，如要我……月品大供這起服滿老？應學傳者國：山式排只不之然清同關；細車是！停屋常間又，資畫領生，相們制在？公別的人寫教資夠。資再我我！只臉夫藝量不路政吃息緊回力之；兒足灣電空時局我怎初安。意今一子區首者微陸現際安除發連由子由而走學體區園我車當會，經時取頭，嚴了新科同？很夫營動通打，出和導一樂，查旅他。坐是收外子發物北看蘭戰坐車身做可來。道就學務。&lt;/p&gt;
 
-&lt;p&gt;國新故。&lt;/p&gt;</content><author><name>萧国</name></author><category term="你说啥呢" /><summary type="html">This is a Chinese test post.</summary></entry></feed>
+&lt;p&gt;國新故。&lt;/p&gt;</content><author><name>萧国</name></author><category term="Test" /><summary type="html">This is a Chinese test post.</summary></entry></feed>

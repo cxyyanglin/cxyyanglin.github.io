@@ -1,21 +1,15 @@
 ---
-layout:     post
-title:      jekyll 教程
-subtitle:    "\"Hello World, Hello Blog\""
+title:      jekyll 从零到一
 date:       2020-03-24
 author:     萧国
 catalog: true
-categories: 测试分类
+categories: 技术
 tags:
     - jekyll
 ---
-我是前言部分1
-我是前言部分2
+记录从零到一开始研究使用jekll + github 生成个人博客的点点滴滴。
 
 <!-- more -->
-
-我是前言部分3
-我是前言部分4
 
 
 ## jekll 本地调试博客页面

@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      iTerm2 + Oh My Zsh 打造舒适终端体验 
+title:      iTerm2 + Oh My Zsh 打造舒适终端体验（转载）
 subtitle:    "\"iTerm2 + Oh My Zsh \""
 date:       2020-03-24
 catalog: true
@@ -9,11 +9,7 @@ tags:
     - Oh my Zsh
 ---
 
-# iTerm2 + Oh My Zsh 打造舒适终端体验
-
-
 ### 写在前面
-
 最终效果图：
 
 ![ImageInitIterm](https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/14.png)
@@ -22,6 +18,9 @@ tags:
 
 因排版和原文中的一些bug，参照搜索引擎和原文有了本篇文章。
 
+<!-- more -->
+
+
 因为powerline以及homebrew均需要安装command line tool，网络条件优越的同学在执行本文下面内容之前，可以先安装XCode并打开运行一次（会初始化安装components），省去以后在iterm2中的等待时间。
 
 另外，git也是必要的，各位可以自行下载安装，除了网络没有任何坑：
@@ -29,6 +28,8 @@ tags:
 https://git-scm.com
 
 介于此，本文默认各位同学已经安装了git环境和xcode（command line tools），遇到提示找不到git命令或需要安装command line tool的地方，文中不再赘述了。
+
+
 
 
 ### 下载iTerm2
