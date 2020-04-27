@@ -1,213 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-16T09:36:12+08:00</updated><id>http://localhost:4000/atom.xml</id><title type="html">意马心猿</title><subtitle>你是我最好的作品</subtitle><author><name>萧国</name></author><entry><title type="html">iTerm2 + Oh My Zsh 打造舒适终端体验（转载）</title><link href="http://localhost:4000/2020/03/24/iterm2-with-oh-my-zsh/" rel="alternate" type="text/html" title="iTerm2 + Oh My Zsh 打造舒适终端体验（转载）" /><published>2020-03-24T00:00:00+08:00</published><updated>2020-03-24T00:00:00+08:00</updated><id>http://localhost:4000/2020/03/24/iterm2-with-oh-my-zsh</id><content type="html" xml:base="http://localhost:4000/2020/03/24/iterm2-with-oh-my-zsh/">&lt;h3 id=&quot;写在前面&quot;&gt;写在前面&lt;/h3&gt;
-&lt;p&gt;最终效果图：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/14.png&quot; alt=&quot;ImageInitIterm&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;本文严重抄袭自：https://www.jianshu.com/p/7de00c73a2bb&lt;/p&gt;
-
-&lt;p&gt;因排版和原文中的一些bug，参照搜索引擎和原文有了本篇文章。&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;p&gt;因为powerline以及homebrew均需要安装command line tool，网络条件优越的同学在执行本文下面内容之前，可以先安装XCode并打开运行一次（会初始化安装components），省去以后在iterm2中的等待时间。&lt;/p&gt;
-
-&lt;p&gt;另外，git也是必要的，各位可以自行下载安装，除了网络没有任何坑：&lt;/p&gt;
-
-&lt;p&gt;https://git-scm.com&lt;/p&gt;
-
-&lt;p&gt;介于此，本文默认各位同学已经安装了git环境和xcode（command line tools），遇到提示找不到git命令或需要安装command line tool的地方，文中不再赘述了。&lt;/p&gt;
-
-&lt;h3 id=&quot;下载iterm2&quot;&gt;下载iTerm2&lt;/h3&gt;
-
-&lt;p&gt;可以直接去官网下载：https://www.iterm2.com/&lt;/p&gt;
-
-&lt;p&gt;安装完成后，在/bin目录下会多出一个zsh的文件。&lt;/p&gt;
-
-&lt;p&gt;Mac系统默认使用dash作为终端，可以使用命令修改默认使用zsh：&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;chsh &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; /bin/zsh
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;如果想修改回默认dash，同样使用chsh命令即可：&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;chsh &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; /bin/bash
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;OK，这就是iTerm2初始的样子，下面我们来美化它，让它变得更好用！&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/1.png&quot; alt=&quot;ImageInitIterm&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;安装oh-my-zsh&quot;&gt;安装Oh my zsh&lt;/h3&gt;
-
-&lt;p&gt;安装方法有两种，可以使用curl或wget，看自己环境或喜好：&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# curl 安装方式&lt;/span&gt;
-sh &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-fsSL&lt;/span&gt; https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# wget 安装方式&lt;/span&gt;
-sh &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh &lt;span class=&quot;nt&quot;&gt;-O&lt;/span&gt; -&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;安装命令和安装完成后的截图：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/2.png&quot; alt=&quot;ImageInitIterm&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;oh-my-zsh开源地址：https://github.com/robbyrussell/oh-my-zsh&lt;/p&gt;
-
-&lt;h3 id=&quot;安装powerline&quot;&gt;安装PowerLine&lt;/h3&gt;
-
-&lt;p&gt;Powerline是agnoster主题的依赖。具体可以在repo里查询到：
-https://github.com/agnoster/agnoster-zsh-theme&lt;/p&gt;
-
-&lt;p&gt;powerline官网：http://powerline.readthedocs.io/en/latest/installation.html&lt;/p&gt;
-
-&lt;p&gt;安装powerline的方式依然简单，也只需要一条命令：&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install powerline-status &lt;span class=&quot;nt&quot;&gt;--user&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;没有安装pip的同学可能会碰到zsh: command not found: pip。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/3.png&quot; alt=&quot;ImageInitIterm&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;使用命令安装pip即可：&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;easy_install pip
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;安装后再次执行安装powerline的命令即可。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/4.png&quot; alt=&quot;ImageInitIterm&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;安装powerfonts&quot;&gt;安装PowerFonts&lt;/h3&gt;
-
-&lt;p&gt;安装字体库需要首先将项目git clone至本地，然后执行源码中的install.sh。&lt;/p&gt;
-
-&lt;p&gt;在你习惯的位置新建一个文件夹，如：~/Desktop/OpenSource/&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/5.png&quot; alt=&quot;ImageInitIterm&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;在此文件夹下执行git clone命令：&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# git clone&lt;/span&gt;
-git clone https://github.com/powerline/fonts.git &lt;span class=&quot;nt&quot;&gt;--depth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1
-&lt;span class=&quot;c&quot;&gt;# cd to folder&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;fonts
-&lt;span class=&quot;c&quot;&gt;# run install shell&lt;/span&gt;
-./install.sh
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;执行结果如下：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/6.png&quot; alt=&quot;ImageInitIterm&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;安装好字体库之后，我们来设置iTerm2的字体，具体的操作是iTerm2 -&amp;gt; Preferences -&amp;gt; Profiles -&amp;gt; Text，在Font区域选中Change Font，然后找到Meslo LG字体。有L、M、S可选，看个人喜好：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/7.png&quot; alt=&quot;ImageInitIterm&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;安装配色方案&quot;&gt;安装配色方案&lt;/h3&gt;
-
-&lt;p&gt;配色方案在使用VIM或Colorful Log时会变得非常有用，同时界面也不会一片黑绿一样死板。&lt;/p&gt;
-
-&lt;p&gt;同样使用git clone的方式下载源码进行安装：&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/Desktop/OpenSource
-git clone https://github.com/altercation/solarized
-&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;solarized/iterm2-colors-solarized/
-open &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;在打开的finder窗口中，双击Solarized Dark.itermcolors和Solarized Light.itermcolors即可安装明暗两种配色：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/8.png&quot; alt=&quot;ImageInitIterm&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;再次进入iTerm2 -&amp;gt; Preferences -&amp;gt; Profiles -&amp;gt; Colors -&amp;gt; Color Presets中根据个人喜好选择这两种配色中的一种即可：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/9.png&quot; alt=&quot;ImageInitIterm&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;安装主题&quot;&gt;安装主题&lt;/h3&gt;
-
-&lt;p&gt;下载agnoster主题，执行脚本安装：&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/Desktop/OpenSource
-git clone https://github.com/fcamblor/oh-my-zsh-agnoster-fcamblor.git
-&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;oh-my-zsh-agnoster-fcamblor/
-./install
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;执行上面的命令会将主题拷贝到oh my zsh的themes中：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/10.png&quot; alt=&quot;ImageInitIterm&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;拷贝完成后，执行命令打开zshrc配置文件，将ZSH_THEME后面的字段改为agnoster。&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vi ~/.zshrc
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/11.png&quot; alt=&quot;ImageInitIterm&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;修改完成后按一下esc调出vi命令，输入:wq保存并退出vi模式。&lt;/p&gt;
-
-&lt;p&gt;此时command+Q或source配置文件后，iTerm2变了模样：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/12.png&quot; alt=&quot;ImageInitIterm&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;安装高亮插件&quot;&gt;安装高亮插件&lt;/h3&gt;
-
-&lt;p&gt;这是oh my zsh的一个插件，安装方式与theme大同小异：&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/.oh-my-zsh/custom/plugins/
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
-vi ~/.zshrc
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;这时我们再次打开zshrc文件进行编辑。找到plugins，此时plugins中应该已经有了git，我们需要把高亮插件也加上：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/13.png&quot; alt=&quot;ImageInitIterm&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;请务必保证插件顺序，zsh-syntax-highlighting必须在最后一个。&lt;/p&gt;
-
-&lt;p&gt;然后在文件的最后一行添加：source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh&lt;/p&gt;
-
-&lt;p&gt;按一下esc调出vi命令，输入:wq保存并退出vi模式。&lt;/p&gt;
-
-&lt;p&gt;执行命令使刚才的修改生效：&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; ~/.zshrc
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;至此大功告成，请看最终效果图：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/14.png&quot; alt=&quot;ImageInitIterm&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;背景图片取自微软Surface Studio的4K壁纸(将近12MB大小)，非常漂亮，需要的可以自取：&lt;/p&gt;
-
-&lt;p&gt;https://pan.baidu.com/s/1LKd4ghGyyNI6UwHhOHvfaA
-提取码: snrd&lt;/p&gt;
-
-&lt;p&gt;更换背景图片方式：iTerm2 -&amp;gt; Preferences -&amp;gt; Profiles -&amp;gt; Window -&amp;gt; BackGround Image勾选图片即可。&lt;/p&gt;
-
-&lt;h4 id=&quot;可选择命令补全&quot;&gt;可选择、命令补全&lt;/h4&gt;
-
-&lt;p&gt;跟代码高亮的安装方式一样，这也是一个zsh的插件，叫做zsh-autosuggestion，用于命令建议和补全。&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/.oh-my-zsh/custom/plugins/
-git clone https://github.com/zsh-users/zsh-autosuggestions
-vi ~/.zshrc
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;找到plugins，加上这个插件即可：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/15.png&quot; alt=&quot;ImageInitIterm&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;插件效果：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/16.png&quot; alt=&quot;ImageInitIterm&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;有同学说补全命令的字体不太清晰，与背景颜色太过相近，其实可以自己调整一下字体颜色。&lt;/p&gt;
-
-&lt;p&gt;Preferences -&amp;gt; Profiles -&amp;gt; Colors 中有Foreground是标准字体颜色，ANSI Colors中Bright的第一个是补全的字体颜色。&lt;/p&gt;</content><author><name>萧国</name></author><category term="iTerm2" /><category term="Oh my Zsh" /><summary type="html">写在前面 最终效果图： 本文严重抄袭自：https://www.jianshu.com/p/7de00c73a2bb 因排版和原文中的一些bug，参照搜索引擎和原文有了本篇文章。</summary></entry><entry><title type="html">jekyll 从零到一</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF/2020/03/24/jekyl-tools/" rel="alternate" type="text/html" title="jekyll 从零到一" /><published>2020-03-24T00:00:00+08:00</published><updated>2020-03-24T00:00:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF/2020/03/24/jekyl-tools</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF/2020/03/24/jekyl-tools/">&lt;p&gt;记录从零到一开始研究使用jekll + github 生成个人博客的点点滴滴。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-28T00:43:49+08:00</updated><id>http://localhost:4000/atom.xml</id><title type="html">意马心猿</title><subtitle>你是我最好的作品</subtitle><author><name>萧国</name></author><entry><title type="html">读和写</title><link href="http://localhost:4000/%E5%86%99%E4%BD%9C/2020/04/20/read-and-write/" rel="alternate" type="text/html" title="读和写" /><published>2020-04-20T04:32:30+08:00</published><updated>2020-04-20T04:32:30+08:00</updated><id>http://localhost:4000/%E5%86%99%E4%BD%9C/2020/04/20/read-and-write</id><content type="html" xml:base="http://localhost:4000/%E5%86%99%E4%BD%9C/2020/04/20/read-and-write/">&lt;p&gt;让自己能感受到更多的细节，去写作，去读书。变成一个逐渐丰满的人。
+&lt;!-- more --&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;写作可以给我们带来什么&quot;&gt;写作可以给我们带来什么&lt;/h3&gt;
+&lt;p&gt;需要去思考，我们为什么要去写作？
+是为了记住什么？还是为了感受什么？
+想清楚了我们写作的缘由，想清楚我们写作的动机，我们就知道应该写出什么样的内容。&lt;/p&gt;
+
+&lt;p&gt;写作是为了更坦诚的面对自己，可以毫无保留的剖析自己，使自己成为那个可以放在阳光下的人，不用为隐藏而浪费精力&lt;/p&gt;</content><author><name>萧国</name></author><category term="写作" /><summary type="html">让自己能感受到更多的细节，去写作，去读书。变成一个逐渐丰满的人。</summary></entry><entry><title type="html">jekyll 从零到一</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF/2020/03/24/jekyl-tools/" rel="alternate" type="text/html" title="jekyll 从零到一" /><published>2020-03-24T00:00:00+08:00</published><updated>2020-03-24T00:00:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF/2020/03/24/jekyl-tools</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF/2020/03/24/jekyl-tools/">&lt;p&gt;记录从零到一开始研究使用jekll + github 生成个人博客的点点滴滴。&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -266,10 +65,70 @@ vi ~/.zshrc
 
 &lt;p&gt;撼大摧坚，徐徐图之。&lt;/p&gt;
 
-&lt;p&gt;Changelog：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Changelog：&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;2020-03-23 初稿&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>萧国</name></author><category term="感悟" /><summary type="html">从新开始 生活忽然很浮躁，很多事情没有来的及去做，或者来的及沉淀，时间就一点一点过去了。 总是要认真面对生活的，要不然每天活在惶恐和不安里，让我觉得生活了无生机，没有什么意思，也不能更好的感受和体验生活。对自己和自己所关心的人来说，没有比这更差的状态了。</summary></entry><entry><title type="html">中文測試</title><link href="http://localhost:4000/test/2013/12/25/%E4%B8%AD%E6%96%87%E6%B5%8B%E8%AF%95/" rel="alternate" type="text/html" title="中文測試" /><published>2013-12-25T07:31:30+08:00</published><updated>2013-12-25T07:31:30+08:00</updated><id>http://localhost:4000/test/2013/12/25/%E4%B8%AD%E6%96%87%E6%B5%8B%E8%AF%95</id><content type="html" xml:base="http://localhost:4000/test/2013/12/25/%E4%B8%AD%E6%96%87%E6%B5%8B%E8%AF%95/">&lt;p&gt;This is a Chinese test post.
+  &lt;li&gt;2020-04-28 测试更新时间&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;数据测试&quot;&gt;数据测试&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;如何添加一个链接
+这是百度的网址&lt;a href=&quot;www.baidu.com&quot;&gt;百度一下&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;如何添加一个引用&lt;/p&gt;
+    &lt;blockquote&gt;
+      &lt;p&gt;在引用里是否也可以添加链接，我们来尝试一下。这是百度的网址&lt;a href=&quot;www.baidu.com&quot;&gt;百度一下&lt;/a&gt;  答案是确定的
+不知道这样进行的应用是不是可以延续很多行，如果是的话，应该如何跳出引用呢？ 是不是多输入一行空格就可以完成输入。&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;现在看，应该是这儿样的&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;如何添加一张图片
+&lt;img src=&quot;http://static.runoob.com/images/runoob-logo.png&quot; alt=&quot;RUNOOB 图标&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;变量的使用方法&lt;a href=&quot;www.baidu.com&quot;&gt;变量名&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://static.runoob.com/images/runoob-logo.png&quot; width=&quot;200%&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;这是一级标题&quot;&gt;这是一级标题&lt;/h1&gt;
+&lt;h2 id=&quot;这是二级标题&quot;&gt;这是二级标题&lt;/h2&gt;
+&lt;h3 id=&quot;这是三级标题&quot;&gt;这是三级标题&lt;/h3&gt;
+&lt;h4 id=&quot;这是四级标题&quot;&gt;这是四级标题&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;无序列表&lt;/li&gt;
+  &lt;li&gt;无序列表1
+    &lt;ul&gt;
+      &lt;li&gt;无序列表下的无序列表&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;有序列表&lt;/li&gt;
+  &lt;li&gt;有序2
+    &lt;ul&gt;
+      &lt;li&gt;有序下的无序1&lt;/li&gt;
+      &lt;li&gt;有序下的无序2
+        &lt;ul&gt;
+          &lt;li&gt;无序下的有序1&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;em&gt;斜体&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;粗体&lt;/strong&gt;&lt;/p&gt;</content><author><name>萧国</name></author><category term="感悟" /><summary type="html">从新开始 生活忽然很浮躁，很多事情没有来的及去做，或者来的及沉淀，时间就一点一点过去了。 总是要认真面对生活的，要不然每天活在惶恐和不安里，让我觉得生活了无生机，没有什么意思，也不能更好的感受和体验生活。对自己和自己所关心的人来说，没有比这更差的状态了。</summary></entry><entry><title type="html">中文測試</title><link href="http://localhost:4000/test/2013/12/25/%E4%B8%AD%E6%96%87%E6%B5%8B%E8%AF%95/" rel="alternate" type="text/html" title="中文測試" /><published>2013-12-25T07:31:30+08:00</published><updated>2013-12-25T07:31:30+08:00</updated><id>http://localhost:4000/test/2013/12/25/%E4%B8%AD%E6%96%87%E6%B5%8B%E8%AF%95</id><content type="html" xml:base="http://localhost:4000/test/2013/12/25/%E4%B8%AD%E6%96%87%E6%B5%8B%E8%AF%95/">&lt;p&gt;This is a Chinese test post.
 &lt;!-- more --&gt;&lt;/p&gt;
 
 &lt;p&gt;善我王上魚、產生資西員合兒臉趣論。畫衣生這著爸毛親可時，安程幾？合學作。觀經而作建。都非子作這！法如言子你關！手師也。&lt;/p&gt;
